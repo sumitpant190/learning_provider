@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:learning_provider/provider/count_provider.dart';
 import 'package:learning_provider/provider/example_one_provider.dart';
+import 'package:learning_provider/provider/favourite_provider.dart';
 import 'package:learning_provider/screens/count_examples.dart';
 import 'package:learning_provider/screens/example_one.dart';
+import 'package:learning_provider/screens/favourite/favourite_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -23,6 +25,9 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(
             create: (_) => ExampleOneProvider(),
           ),
+          ChangeNotifierProvider(
+            create: (_) => FavouriteProvider(),
+          ),
         ],
         child: MaterialApp(
           title: 'Flutter Demo',
@@ -30,7 +35,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: ExampleOne(),
+          home: FavouriteScreen(),
         ));
   }
 }
