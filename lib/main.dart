@@ -7,6 +7,7 @@ import 'package:learning_provider/screens/count_examples.dart';
 import 'package:learning_provider/screens/dark_theme.dart';
 import 'package:learning_provider/screens/example_one.dart';
 import 'package:learning_provider/screens/favourite/favourite_screen.dart';
+import 'package:learning_provider/screens/notify_listeners_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             darkTheme: ThemeData(brightness: Brightness.dark),
-            home: DarkTheme(),
+            home: NotifyListenersScreen(),
           );
         }));
   }
